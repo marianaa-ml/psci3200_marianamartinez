@@ -1,0 +1,33 @@
+---
+title: "PSCI 3200 Research Question"
+format: html
+editor: visual
+---
+
+## Research Question for Final Project
+
+### Option 1
+
+##### Is Chinese FDI increasing left wing support in Latin American countries?
+
+I am interested in exploring the relationship between FDI and ideology in Latin America. Specifically I'm interested in knowing how FDI from the United States and China has fluctuated throughout the years depending on who's governing different Latin American countries. I would like to measure how left wing support in Latin American countries has increased with Chinese FDI. In order to carry out this research I would need to find data that categorizes different political parties on a scale from right-wing to left-wing. Then, I would need to access some voting behavior data as well as Chinese FDI data. I would want to build a model that shows whether vote shares for left wing parties have increase as Chinese FDI increases too.
+
+The Psephos Adam Carr website contains information on almost every country's elections up until 2022, so this could be a good source to observe voting behavior. The Manifiesto Project contains quantitative indicators of how left/right wing a party is, and it has information on several countries, however I don't think it's as exhaustive as it could be, which means I would have to do additional research and perhaps code some variables myself. The World Bank offers data on FDI, CEPAL also has data specifically on Latin America.
+
+###### Datasets available
+
+Psephos Adam Carr: <http://psephos.adam-carr.net/>
+
+Manifiesto Project: <https://manifesto-project.wzb.eu/>
+
+### Option 2
+
+##### Do Latin American countries with stronger financial markets see a higher extent of spillover effects from FDI?
+
+I would also be interested in exploring how FDI affects host economies and whether this depends on previously existing institutions in the host country. I want to know if FDI actually grows Latin American countries' GDP and increases productivity, therefore raising the standard of living in developing countries. Moreover, I want to know if other conditions such as as previously strong financial market facilitates these spillover effects in the host country. To answer this question I would need data on FDI in Latin America, a way to measure financial conditions in host countries and finally, data on productivity in Latin America. I could use these datasets to see if there is a correlation between host country financial conditions and benefit from FDI.
+
+The World Bank has datasets on FDI as well as on different countries' productivity and GDP growth. The IMF Financial Development Index dataset would also be useful to analyse how strong a country's financial market is.
+
+###### Datasets
+
+IMF <https://data.imf.org/en/datasets/IMF.MCM:FDI>
