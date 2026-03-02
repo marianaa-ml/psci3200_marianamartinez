@@ -1,7 +1,5 @@
 ---
 title: "PSCI 3200 Research Question"
-format: html
-editor: visual
 ---
 
 ## Research Question for Final Project
