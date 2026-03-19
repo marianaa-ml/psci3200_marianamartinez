@@ -10,3 +10,5 @@ website:
         text: Home
       - href: psci3200qa.qmd
         text: Research Question
+      - href: researchd.qmd
+        text: Research Design
