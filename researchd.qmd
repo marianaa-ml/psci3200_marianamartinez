@@ -166,9 +166,9 @@ g2
 This study will use a two-way fixed effects regression model to compare the impact of Chinese development finance within each Latin American country from 2000 to 2021. Country fixed effects control for time-invariant factors such as geography, historical political orientation, and institutional factors, while the year fixed effects control for trends affecting all countries. The regression will also control for confounding variables that could affect both the likelihood of receiving Chinese financing and an increase in left-wing party support, for example GDP per capita and trade with China. 
 
 $$
-LeftRightIndex_{it} = \beta_1 \cdot \log(ChineseFinance_{it-1}) + \beta_2 \cdot GDP_{it} + \beta_3 \cdot Trade_{it} + \alpha_i + \gamma_t + \epsilon_{it}
+LeftRightIndex_{it} = \beta_1 \cdot \log(chinese\ funding\ ratio) + \beta_2 \cdot GDP_{it} + \beta_3 \cdot Trade_{it} + \alpha_i + \gamma_t + \epsilon_{it}
 $$
 
 $$
-AntiElitismIndex_{it} = \beta_1 \cdot \log(ChineseFinance_{it-1}) + \beta_2 \cdot GDP_{it} + \beta_3 \cdot Trade_{it} + \alpha_i + \gamma_t + \epsilon_{it}
+AntiElitismIndex_{it} = \beta_1 \cdot \log(chinese \ funding\ ratio) + \beta_2 \cdot GDP_{it} + \beta_3 \cdot Trade_{it} + \alpha_i + \gamma_t + \epsilon_{it}
 $$
