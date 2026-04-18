@@ -12,3 +12,6 @@ website:
         text: Research Question
       - href: researchd.qmd
         text: Research Design
+      - href: researchdesignexpanded.qmd
+        text: Research Design Expanded
+        
