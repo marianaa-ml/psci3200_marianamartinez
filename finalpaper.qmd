@@ -1,0 +1,575 @@
+---
+title: "FINAL PAPER"
+format: html
+editor: visual
+bibliography: references.bib
+echo: false
+warning: false
+message: false
+---
+
+# Influence or Illusion? Chinese Development Finance and Political Outcomes in Latin America
+
+## Introduction
+
+Between the 2000-2021 period China allocated over \$1.34 trillion across 165 middle and low income countries to finance over 20000 development projects. Latin America has been one of the regions that has witnessed increased Chinese interest to grow their portfolio through different infrastructure projects such as ports, railways, and energy generation. The increased Chinese interest in Latin America has raised concerns about its economic and political implications. For some analysts and policymakers, China’s development finance strategy in Latin America and the Caribbean reflects an attempt to lock in Chinese influence and secure access to essential resources, as well as hindering US hegemony in LAC [@ziemer2026china].
+
+Development finance and international capital allocation is intricately linked with ideological and geopolitical factors. Kempf et al. quantified how loan volume and size changed as ideological alignment with the US shifted, finding a negative correlation between US loan size and ideological distance. This paper found that when a US bank experienced increased ideological distance from a country after elections, it reduced its lending volume by 22% and number of loans by 10% [@kempf2023]. US institutional investors are more likely to allocate capital when a foreign country is US aligned, both on economic and social issues. 
+
+Historically, this mechanism has impacted Latin American domestic politics, as LAC governments had an incentive to comply with US foreign policy, in order to reap the benefits of development finance. In addition, US led international institutions such as the IMF have been well known for their conditionality: in return for financial assistance, governments had to comply with policy changes that align with a market economy such as trade liberalization, privatization of state-owned enterprises and deregulation of markets [@dreher2015imf]. Prior to China’s political strengthening, with no alternative creditors, adhering to Western conditionalities was the only option.
+
+But, the global power balance has been shifting in the past years . With China strengthening and investing more in initiatives such as the Belt and Road Initiative (BRI) that speak to low and middle income countries; and, with the United States shifting its foreign policy towards an “America First” perspective, Latin America has had the opportunity to re-align [@estefan2025realigning].  
+
+Chinese development finance represents an alternative for LACs to diversify their borrowing strategies. Past scholarship has sought to understand the supply and demand factors of this new kind of borrowing. Scholars like Albright have found that LACs see Chinese development finance as a compelling alternative to the US, economies like Ecuador purposely have chosen Chinese loans as a way to reduce dependency on the US [@albright2025]. 
+
+Chinese loans are known to be larger, which is attractive for LACs, especially when thinking about infrastructure projects. But most importantly, Chinese loans are known because of their “no strings attached” policy, which differs greatly from the West. As LACs find an opportunity to distance themselves from the US, and find themselves less indebted to the West, politicians have the opportunity to target broader agendas. 
+
+Throughout the 1980s, the United States had significant financial and political presence in Latin America, but in the late 90s, the region saw a wave of left-wing victories. At the same time, Chinese development finance was accelerated in the late 90s with the establishment of the Chinese Development Bank in 1994 [@gallagher2017china]. In the late 2010s, a second wave of leftist governments emerged in the region with the election of leaders such as Gabriel Boric in Chile, the return of Lula in Brazil and Andres Manuel Lopez Obrador in Mexico [@britannica_pinktide]. Similarly, Chinese development finance saw a massive increase post 2008 and launched the Belt and Road Initiative in 2013. 
+
+Past literature already establishes and quantifies the relationship between capital allocation and political ideology. This paper seeks to take that a step further and asks whether Chinese development finance has enabled ideological party shifts in Latin America by loosening domestic political constraints imposed by the US. 
+
+**Hypothesis: Higher levels of Chinese development finance in Latin American countries will shift domestic politics leftward.**
+
+This hypothesis is grounded on past political economy literature. Additionally it takes past scholarship on the demand and supply of development finance loans as a starting point. Knowing that Chinese financing is characterized by fewer political constraints, it is reasonable to expect that an increase in Chinese development finance will increase left wing party support in LACs. Moreover, when less reliant on the US, politicians can feel emboldened to criticize the US hegemony and seek divestment from it through a closer alignment with Chinese values. As a result, increased access to Chinese financing may strengthen the appeal and success of left wing presidential candidates that advocate for independence from the US agenda.
+
+## Data and Research Design
+
+This study will use a two-way fixed effects regression model to compare the impact of Chinese development finance on V-Dem’s left-right index (cite) within each Latin American country from 2000 to 2021. Country fixed effects control for time-invariant factors such as geography, historical political orientation, and institutional factors, while the year fixed effects control for trends affecting all countries. The regression will also control for confounding variables that could affect both the likelihood of receiving Chinese financing and an increase in left-wing party support, for example GDP per capita.
+
+$$
+LeftRightIndex_{it} = \beta_1 \cdot chinese\ funding\ ratio + \beta_2 \cdot GDP_{it} + \alpha_i + \gamma_t + \epsilon_{it}
+$$
+
+$$
+AntiElitismIndex_{it} = \beta_1 \cdot chinese \ funding\ ratio + \beta_2 \cdot GDP_{it} + \alpha_i + \gamma_t + \epsilon_{it}
+$$
+
+The independent variable for this paper is the share of Chinese development finance to Western development finance. I chose to work with this ratio instead of the raw amount of Chinese funding because this paper focuses on relative influence from these two spheres on Latin American domestic politics. The ratio measures the balance of power, an increase in this ratio can predict a Latin American country potentially shifting its political alignment. The raw number with the Chinese aid amount is not very telling of how much China is out competing the US in terms of influence, it only shows Chinese presence.
+
+Data on Chinese development finance was retrieved from AidData 3.0, which contains information on  worldwide development projects funded by China [@aiddata]. This database documents over 20,985 projects across 165 low and middle income countries totaling \$1.34 trillion. On the other hand, data on Western funding was retrieved from the OECD Creditor Reporting System, which covers bilateral aid from all rich countries and major Western development banks [@oecd_crs]. Both the AidData 3.0 and the CRS data were filtered to cover only the Latin American and the Caribbean, and were aggregated at the country-year level for the 2000-2021 period, to match what was available for Chinese development finance. In addition, the monetary value of commitment was adjusted in all datasets to be in 2021 dollars using CPI data from the Federal Reserve. 
+
+In order to have a reliable independent variable that took into account Chinese influence and not just Chinese presence, I constructed a new variable that calculated the share of Chinese funding of the total received Western and Chinese funding. For this process, I merged the AidData 3.0 dataset with the dataset from the CRS, adjusting all quantities to 2021 US dollars and ensuring everything was in the same scale. The share I created by dividing the amount of Chinese funding in a given year by the total amount of funding received by a country, which included Western funding.
+
+The dependent variable is the country-level ideological position. Data on party position and electoral outcomes was retrieved from the V-Party dataset. The V-Party dataset was produced by the V-Dem institute and tracks shifts and trends in political parties since 1970 across the world. It contains expert coded measures of party ideology such as populism, anti-elitism, prioritization of minority rights and more. The dataset has been narrowed down to the 2000-2021 period and the Latin American countries, in order to match the information for Chinese financing.
+
+To create the country-level ideological position variable, I selected anti-elitism and economic left-right wing scale to track how left wing the analyzed party is. According to the V-Party codebook, a higher number for the anti-elitism variable means that anti-elite rhetoric is more important for the given party. On the other hand, the higher the left-right index, the more right wing the party is. I considered the anti-elitism variable to be a good indicator of party ideology because of previous literature that identifies left wing parties as more prone to make statements against the elite. Knowing from previous research that borrowing decisions from China often contain an ideological component that seeks to diversify from the US imperialist agenda, it also seems reasonable to trust the anti-elitism variable to be an accurate predictor of left-right lean. Moreover, the economic left-right wing variable is the best to objectively measure the political orientation of each party, where parties with a lower number are considered more left leaning. 
+
+The first challenge I found with this data set was that it only contained information for election years in each country. Because I wanted to have more observations, for every year of Chinese funding, I completed the missing years with the values from the previous election year. This made sense, since for the duration of a given party in power, their right/left lean will remain the same. This allowed me to go from only 123 observations across all LACs to 532 observations.
+
+Additionally, the datasets had a different unit of analysis. While the AidData 3.0 dataset had country-year for each observation, the V-Party dataset had party-country-year for each observation. In order to be able to use both datasets together, I had to modify the unit of analysis in the V-Party dataset so I could have it as a country-year too. To calculate the ideological orientation of each country each election year, I grouped by country and calculated the weighted mean of the left-right ideology score as well as the anti-elitism variable. The decision to calculate a weighted mean was to accurately account for the fact that not all parties within every country are equally relevant. The weighted mean gives a more accurate depiction of the ideological anchor of the countries each given year. Both datasets were merged by country and year. The OECD dataset had less observations, so I reduced the sample to the 11 Latin American countries for which I had all the available information.
+
+A key limitation of this model is reverse causality. Countries that are already left leaning tend to receive more funding from China, and none from the US. For example, two extreme cases like Cuba and Venezuela did not receive any funding from the US but this was because of pre-existing conditions that confound the relationship between ideology and development finance. Fixed effects are a good way to get around this, since they absorb the fact that countries like Cuba were always left leaning. Fixed effects allow me to compare each country against itself over time, which partially removes biases. However, fixed effects do not solve the endogeneity problem completely. For example, China might strategically choose countries that were already moving leftwards. Other factors inside LACs could cause governments to move leftward and China to choose them as lenders, such as the rise of populism, anti-US sentiment or institutional instability. The fixed effects model can’t account for changing political trends within countries over time, only absorb time invariant characteristics. 
+
+In addition, other confounding variables such as GDP and aspects of the macroeconomic structure of LACs confound the relationship: China would be investing in these countries because of the attractiveness of these factors and at the same time, these factors can impact ideology. 
+
+To address these limitations, I conduct two additional regressions using a one year lead of Chinese monetary commitment and unemployment rates in LACs. The first regression reverses the relationship, testing whether the left-right index can predict future Chinese financing. This checks whether countries were already shifting leftward on their own before Chinese funding arrived. The second regression looks at the relationship between unemployment rates and Chinese financing. If the relationship between Chinese financing and LACs were driven by economic conditions, it would be reasonable to expect a change in the unemployment rate as Chinese funding increases.  
+
+## Results
+
+### **Scatterplots: Country Ideological Position vs  Share of Chinese Development Finance**
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(gapminder)
+library(scales)
+library(lubridate)
+library(gt)
+library(gtExtras)
+library(readxl)
+library(kableExtra)
+library(readr)
+library(haven)
+library(stringr)
+library(zoo)
+library(fixest)
+library(fredr)
+library(modelsummary)
+library(arrow)
+```
+
+```{r}
+chinese_aid <- read_excel('/Users/mariana/Desktop/datasets/AidDatas_Global_Chinese_Development_Finance_Dataset_Version_3_0/AidDatasGlobalChineseDevelopmentFinanceDataset_v3.0.xlsx', sheet = 5)
+```
+
+```{r}
+latam_aid <- chinese_aid %>%
+  
+  filter(`Recipient Region` == "America") %>%
+  
+  filter(!Recipient %in% c("America, regional", "Curacao", "Sint Maarten (Dutch part)"))
+```
+
+```{r}
+latam_aid2 <- latam_aid %>%
+  
+  group_by(Recipient, `Commitment Year`) %>%
+  
+  summarise(total_finance = sum(`Amount (Constant USD 2021)`, na.rm = T)) 
+```
+
+```{r}
+party <- read_csv('/Users/mariana/Desktop/datasets/CPD_V-Party_CSV_v2/V-Dem-CPD-Party-V2.csv')
+```
+
+```{r}
+mod <- party %>%
+  select(v2pariglef, v2paanteli, v2panumbseat, v2pavote, v2patotalseat, v2papeople, e_regiongeo, everything()) %>%
+  select(1:27) %>%
+  select(v2paenname, country_name, year, e_regiongeo, everything()) %>%
+  filter(e_regiongeo %in% c(16, 17, 18, 19) & year %in% c(2000:2021)) %>%
+  filter(!country_name %in% c("United States of America", "Canada")) %>%
+  select(1:9)
+```
+
+```{r}
+mod2 <- mod %>%
+  group_by(country_name, year) %>%
+  summarise(anti_elitism_index = weighted.mean(v2paanteli, w = v2pavote, na.rm =T),
+            left_right_index = mean(v2pariglef, w = v2pavote, na.rm = T))
+```
+
+```{r}
+mod3 <- mod2 %>%
+  group_by(country_name) %>%
+  arrange(year) %>%
+  complete(year = 2001:2021) %>%
+  fill(left_right_index, anti_elitism_index, .direction = "down")
+```
+
+```{r}
+OECD_crs <- read_parquet('/Users/mariana/Desktop/datasets/CRS-reduced.parquet')
+country_codes <- read_excel('/Users/mariana/Desktop/datasets/DevFi_Classification.xlsx')
+```
+
+```{r}
+crs_small <- OECD_crs %>%
+  select(year, recipient_code, usd_commitment)
+
+crs_filtered <- crs_small %>%
+  filter(year >= 2000 & year <= 2021)
+```
+
+```{r}
+codes_clean <- country_codes %>%
+  rename(
+    recipient_code = code,
+    country_name = `code name e`
+  ) %>%
+  distinct()
+
+crs_merged <- crs_filtered %>%
+  left_join(codes_clean, by = "recipient_code")
+```
+
+```{r}
+lac <- c(
+  # Latin America
+  "Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Costa Rica",
+  "Ecuador", "El Salvador", "Guatemala", "Honduras", "Mexico",
+  "Nicaragua", "Panama", "Paraguay", "Peru", "Uruguay", "Venezuela",
+
+  # Caribbean
+  "Antigua and Barbuda", "Bahamas", "Barbados", "Belize",
+  "Cuba", "Dominica", "Dominican Republic", "Grenada",
+  "Guyana", "Haiti", "Jamaica", "Saint Kitts and Nevis",
+  "Saint Lucia", "Saint Vincent and the Grenadines",
+  "Suriname", "Trinidad and Tobago"
+)
+
+lac_codes <- codes_clean %>%
+  filter(country_name %in% lac) %>%
+  pull(recipient_code)
+
+crs_lac <- crs_filtered %>%
+  filter(recipient_code %in% lac_codes)
+
+crs_lac <- crs_lac %>%
+  left_join(codes_clean, by = "recipient_code")
+
+lac_country_year <- crs_lac %>%
+  group_by(country_name, year) %>%
+  summarise(
+    oecd_aid = sum(usd_commitment, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# I only have a few countries-- should i reduce my sample to this? 11 latin american and caribbean countries
+```
+
+```{r}
+fredr_set_key("1b32afe69f85182f7dab9e135dd1cfce")
+
+cpi <- fredr(series_id = "CPIAUCSL") %>%
+  select(date, value)
+
+cpi <- cpi %>%
+  mutate(year = lubridate::year(date)) %>%
+  group_by(year) %>%
+  summarize(cpi = mean(value))
+
+cpi_2021 <- cpi %>% filter(year == 2021) %>% pull(cpi)
+
+lac_country_year <- lac_country_year %>%
+  left_join(cpi, by = "year") %>%
+  mutate(
+    oecd_aid_real = oecd_aid * (cpi_2021 / cpi)
+  )
+
+#gives me aid in millions in 2021 dollars
+```
+
+```{r}
+all_aid <- latam_aid2 %>%
+  full_join(lac_country_year, by = c("Recipient" = "country_name", "Commitment Year" = "year")) %>%
+  rename(chinese_funding = total_finance,
+         american_funding = oecd_aid_real) %>%
+  mutate(american_funding = coalesce(american_funding, 0),
+         chinese_funding = chinese_funding / 1e6)
+
+#check about converting units
+
+ratio <- all_aid %>%
+  mutate(chinese_share = chinese_funding / (chinese_funding + american_funding),
+         total_aid = chinese_funding + american_funding) %>%
+  rename(country_name = Recipient,
+         year = `Commitment Year`)
+```
+
+```{r}
+sample_countries <- c("Argentina", "Brazil", "Chile", "Colombia", "Costa Rica", "Dominican Republic", "Ecuador" , "Guatemala", "Mexico", "Peru", "Uruguay")
+```
+
+```{r}
+data_plot <- ratio %>%
+  inner_join(mod3, by = c("country_name", "year")) %>%
+  filter(country_name %in% sample_countries)
+#ask about sample country situation
+
+comms <- c("Venezuela", "Cuba")
+
+highlight <- data_plot %>%
+  filter(country_name %in% comms)
+```
+
+```{r}
+left_right <- ggplot(data = data_plot, aes(x = chinese_share, y = left_right_index)) +
+  geom_point(alpha = 0.5) +
+  geom_point(data = highlight, 
+             color = "red", size = 2) +
+  geom_text(
+    data = highlight,
+    aes(label = country_name),
+    color = "red",
+    size = 3,
+    vjust = -1,
+    nudge_x = -0.05,
+    nudge_y = 0.2
+  ) +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Chinese Development Finance and Left-Wing Political Support",
+    subtitle = "Latin America and the Caribbean (Country-Year Observations)",
+    x = "Chinese Funding Share",
+    y = "Left-Right Ideology Index",
+    caption = "Figure 1. Each point represents a country-year observation.\n Higher values of the index indicate more right-leaning ideology.\n The fitted line suggests a negative association between Chinese financing and right-leaning political outcomes."
+  ) +
+  
+  theme_classic(base_size = 14) +
+  
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    plot.subtitle = element_text(size = 12),
+    plot.caption = element_text(size = 9, hjust = 0),
+    axis.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r}
+left_right
+```
+
+```{r}
+anti_elit <- ggplot(data = data_plot, aes(x = chinese_share, y = anti_elitism_index)) +
+  geom_point(alpha = 0.5) +
+  geom_point(data = highlight, 
+             color = "red", size = 2) +
+ geom_text(
+    data = highlight,
+    aes(label = country_name),
+    color = "red",
+    size = 3,
+    vjust = -1
+  ) +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Chinese Development Finance and Anti Elitist Rhethoric",
+    subtitle = "Latin America and the Caribbean (Country-Year Observations)",
+    x = "Chinese Funding Share",
+    y = "Anti-elitist Ideology Index",
+    caption = "Figure 2. Each point represents a country-year observation.n\ The fitted line shows the linear relationship between Chinese development finance share and anti-elitist rhetoric."
+  ) +
+  
+  theme_classic(base_size = 14) +
+  
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    plot.subtitle = element_text(size = 12),
+    plot.caption = element_text(size = 9, hjust = 0),
+    axis.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank()
+  )
+```
+
+```{r}
+anti_elit
+```
+
+The scatterplots display the correlation between Chinese development finance and each of the two measures of ideological position: left-right lean and anti-elitism. Figure 1. shows a negative correlation between the share of Chinese financing received by a country and the left-right index, this suggests that as the share of Chinese presence increases, LACs shift towards the left. Moreover, Figure 2. shows a positive correlation between the share of Chinese financing and the anti-elitism index, indicating that when a country has a higher ratio of Chinese to Western funding, the anti elitist rhetoric used by parties tends to increase. These results are consistent with the mechanism proposed in the hypothesis and also, consistent with past literature, such as the interviews conducted to policy officials in Ecuador, where they expressed how Chinese funding was perceived as a lever to gain more independence from American values and constraints [@albright2025].
+
+### **Fixed Effects Regression: Impact of Chinese Development Finance on Country Ideological Position**
+
+```{r}
+gdp_wb_raw <- read_csv('/Users/mariana/Desktop/datasets/GDP WB clean.csv')
+```
+
+```{r}
+wb_clean <- gdp_wb_raw %>%
+  select(where(~ !all(is.na(.))))
+
+
+wb_clean <- wb_clean %>%
+  select(`Country Name`, `Country Code`, starts_with("19"), starts_with("20"))
+
+wb_long <- wb_clean %>%
+  pivot_longer(
+    cols = -c(`Country Name`, `Country Code`),
+    names_to = "year",
+    values_to = "gdp_pc"
+  )
+
+
+wb_long <- wb_long %>%
+  mutate(
+    year = as.numeric(year),
+    gdp_pc = as.numeric(gdp_pc)
+  )
+
+
+wb_long <- wb_long %>%
+  filter(year >= 2000 & year <= 2021)
+
+latam_codes <- c(
+  "ARG","BOL","BRA","CHL","COL","CRI","CUB","DOM","ECU","SLV",
+  "GTM","HTI","HND","JAM","MEX","NIC","PAN","PRY","PER","URY","VEN",
+  "BLZ","GUY","SUR","TTO"
+)
+```
+
+```{r}
+wb_latam <- wb_long %>%
+  filter(`Country Code` %in% latam_codes) %>%
+  left_join(cpi, by = "year") %>%
+  mutate(gdp_2021dollars = gdp_pc * (cpi_2021 / cpi))
+```
+
+```{r}
+regression_data <- data_plot %>%
+  left_join(wb_latam, by = c("country_name" = "Country Name"))
+```
+
+```{r}
+regression_data <- regression_data %>%
+  mutate(
+    country = as.factor(country_name),  
+    year = as.numeric(year.x),           
+    log_gdp = log1p(gdp_2021dollars)        
+  )
+```
+
+```{r}
+left_right_re <- feols(
+  left_right_index ~ chinese_share + log_gdp | country + year,
+  data = regression_data
+)
+```
+
+```{r}
+anti_e_re <- feols(
+  anti_elitism_index ~ chinese_share + log_gdp | country + year,
+  data = regression_data
+)
+```
+
+```{r}
+modelsummary(
+  list(
+    "Left-Right Ideology" = left_right_re,
+    "Anti-Elitism" = anti_e_re
+  ),
+  
+  title = "Fixed Effects Regression Results",
+  
+  stars = c('*' = .05, '**' = .01, '***' = .001),
+  
+  statistic = "({std.error})",
+  
+  coef_map = c(
+    "chinese_share" = "Chinese Funding Share",
+    "log_gdp" = "GDP Per Capita (Log)"
+  ),
+  
+  gof_map = c("nobs", "r.squared", "adj.r.squared"),
+  
+  notes = c(
+    "Standard errors in parentheses.",
+    "All models include country and year fixed effects."
+  )
+)
+```
+
+The regression looks at the relationship between Chinese development finance and a LAC's ideological position. Chinese development finance does not appear to significantly predict movement along the left-right scale. However, higher levels of Chinese financing are associated with significantly higher levels of anti-elitist rhetoric, suggesting that Chinese engagement may correlate more strongly with populist political discourse than with left-right changes.
+
+However, these models are not enough to define the relationship between Chinese development finance and ideological shifts as causal. It is possible that China strategically chooses countries that already exhibit trends that align with their values, such as higher levels of populism or pre-existing shifts towards the left. In order to address this, I performed two regressions to address this reverse causality problem.
+
+### Empirical Extension
+
+A regression that studies the relationship between left-right ideology and Chinese financing addresses the problem of reverse causality. This regression seeks to understand whether more left-leaning countries attracted more Chinese funding. In addition, I created another regression to explore whether Chinese financing is also driven by macroeconomic conditions by choosing to quantify the relationship between unemployment rates and Chinese development finance. If the relationship between Chinese financing and LACs were driven by economic conditions, it would be reasonable to expect a change in the unemployment rate as the share of Chinese funding increases. In a similar regression with country and year fixed effects, I aimed to find the relationship between Chinese funding and unemployment rates.
+
+$$ChineseShare_{it} = \beta_1 LeftRightIndex_{it} + \beta_2 GDP_{it} + \alpha_i + \gamma_t + \epsilon_{it}
+$$
+
+$$
+UnemploymentRate_{it} = \beta_1 ChineseShare_{it}
++ \beta_2 GDP_{it}
++ \alpha_i + \gamma_t + \epsilon_{it}
+$$
+
+```{r}
+lead_dataset <- data_plot %>%
+  arrange(country_name, year) %>%
+  group_by(country_name) %>%
+  mutate(
+    china_funding_t1 = lead(chinese_funding, 1),
+    china_funding_t2 = lead(chinese_funding, 2)
+  ) %>%
+  ungroup()
+```
+
+```{r}
+placeboR <- lm(china_funding_t1 ~ left_right_index + factor(country_name) + factor(year), data = lead_dataset)
+```
+
+```{r}
+placeboR2 <- lm(china_funding_t2 ~ left_right_index + factor(country_name) + factor(year), data = lead_dataset)
+```
+
+```{r}
+unem <- read_csv('/Users/mariana/Desktop/datasets/unemployment.csv')
+```
+
+```{r}
+unem_clean <- unem %>%
+  select(where(~ !all(is.na(.))))
+
+
+unem_clean <- unem_clean %>%
+  select(`Country Name`, `Country Code`, starts_with("19"), starts_with("20"))
+
+
+unem_long <- unem_clean %>%
+  pivot_longer(
+    cols = -c(`Country Name`, `Country Code`),
+    names_to = "year",
+    values_to = "unemployment rate"
+  )
+
+
+unem_long <- unem_long %>%
+  mutate(
+    year = as.numeric(year),
+    `unemployment rate` = as.numeric(`unemployment rate`)
+  )
+
+
+unem_long <- unem_long %>%
+  filter(year >= 2000 & year <= 2021)
+
+
+latam_codes <- c(
+  "ARG","BOL","BRA","CHL","COL","CRI","CUB","DOM","ECU","SLV",
+  "GTM","HTI","HND","JAM","MEX","NIC","PAN","PRY","PER","URY","VEN",
+  "BLZ","GUY","SUR","TTO"
+)
+```
+
+```{r}
+unem_latam <- unem_long %>%
+  filter(`Country Code` %in% latam_codes) %>%
+  left_join(regression_data, by = c("Country Name" = "country", "year")) 
+```
+
+```{r}
+model_placebo <- feols(
+  `unemployment rate` ~ chinese_share + log_gdp | `Country Name` + year,
+  data = unem_latam,
+  cluster = ~`Country Name`
+)
+```
+
+```{r}
+unem_latam <- unem_long %>%
+  filter(`Country Code` %in% latam_codes) %>%
+  left_join(regression_data, by = c("Country Name" = "country", "year")) 
+```
+
+```{r}
+model_placebo <- feols(
+  `unemployment rate` ~ chinese_share + log_gdp | `Country Name` + year,
+  data = unem_latam,
+  cluster = ~`Country Name`
+)
+```
+
+```{r}
+modelsummary(
+  list(
+    "Left-Right Ideology" = left_right_re,
+    "Anti-Elitist Rhetoric" = anti_e_re,
+    "Unemployment Rate" = model_placebo
+  ),
+  
+  coef_map = c(
+    "chinese_share" = "Chinese Funding Share",
+    "log_gdp" = "GDP Per Capita (Log)"
+  ),
+  
+  stars = TRUE,
+  
+  gof_map = c(
+    "nobs",
+    "r.squared",
+    "adj.r.squared"
+  ),
+  
+  title = "Fixed Effects Regressions: Chinese Financing and Political Outcomes",
+  
+  notes = c(
+    "Standard errors clustered at the country level.",
+    "All models include country and year fixed effects.",
+    "Significance levels: * p < 0.05, ** p < 0.01, *** p < 0.001"
+  ),
+  
+  output = "gt"
+)
+```
+
+If Chinese funds were simply flowing towards already left-leaning countries, we would expect left-right ideology to predict an increase in Chinese funding. However, the relationship is statistically significant in both models.The third regression does not provide any robust evidence that Chinese funding is driven by macroeconomic factors. This indicates that the initial hypothesis was partially supported: increased levels of Chinese funding are associated with higher levels of populist and anti-elitist rhetoric in Latin American countries, though not necessarily with shifts in traditional left-right ideological alignment.
+
+## Discussion and Policy Implications
+
+The final results of this project suggest that an increase Chinese development finance does not drive significant shifts in traditional left-right lean in LACs. However, it does encourage and increase anti-elitist and populist rhetoric. This increase in anti-elitist and populist rhetoric may contribute to distance between Latin America and the US, which is also supported by past literature that explores the impact of Western conditionality in development finance.
+
+With rising concerns about the Chinese political and economic threat, understanding the impact of increased Chinese financial influence in the region should be top priority. Whether Latin American countries choose to bandwagon with the new power or balance against it by siding with the United States will be a key determinant of what the future world order will look like. Development finance is a powerful way of tracking how soft power tools can reshape the international system, and understand what happens as Latin America shifts into closer alignment with China.

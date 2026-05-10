@@ -44,7 +44,7 @@ library(fredr)
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 
-chinese_aid <- read_excel('/Users/mariana/Documents/GitHub/psci3200_marianamartinez/datasets/AidDatas_Global_Chinese_Development_Finance_Dataset_Version_3_0/AidDatasGlobalChineseDevelopmentFinanceDataset_v3.0.xlsx', sheet = 5)
+chinese_aid <- read_excel('/Users/mariana/Desktop/datasets/AidDatas_Global_Chinese_Development_Finance_Dataset_Version_3_0/AidDatasGlobalChineseDevelopmentFinanceDataset_v3.0.xlsx', sheet = 5)
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
@@ -64,7 +64,7 @@ latam_aid2 <- latam_aid %>%
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-party <- read_csv('/Users/mariana/Documents/GitHub/psci3200_marianamartinez/datasets/CPD_V-Party_CSV_v2/V-Dem-CPD-Party-V2.csv')
+party <- read_csv('/Users/mariana/Desktop/datasets/CPD_V-Party_CSV_v2/V-Dem-CPD-Party-V2.csv')
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
@@ -94,7 +94,7 @@ mod3
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-american_aid_untouched <- read_xlsx('/Users/mariana/Documents/GitHub/psci3200_marianamartinez/datasets/AmericanActiveProjects.xlsx')
+american_aid_untouched <- read_xlsx('/Users/mariana/Desktop/datasets/AmericanActiveProjects.xlsx')
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
@@ -164,7 +164,7 @@ ratio_funding
 ```
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-wb_raw <- read_excel('/Users/mariana/Documents/GitHub/psci3200_marianamartinez/datasets/IBRD_IDA Summary (Lending).xlsx')
+wb_raw <- read_excel('/Users/mariana/Desktop/datasets/IBRD_IDA Summary (Lending).xlsx')
 head(wb_raw)
 ```
 
@@ -303,7 +303,7 @@ AntiElitismIndex_{it} = \beta_1 \cdot \log(chinese \ funding\ ratio) + \beta_2 \
 $$
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-gdp_wb_raw <- read_csv('/Users/mariana/Documents/GitHub/psci3200_marianamartinez/datasets/GDP WB clean.csv')
+gdp_wb_raw <- read_csv('/Users/mariana/Desktop/datasets/GDP WB clean.csv')
 head(gdp_wb_raw)
 ```
 
@@ -390,7 +390,7 @@ The main threat to causal inference is reverse causality: countries that are alr
 A good way to get around this problem is to run a placebo test. In this case, I have chosen to use the unemployment rate as my variable for the placebo test. If the relationship between Chinese financing and LACs were driven by economic conditions, it would be reasonable to expect a change in the unemployment rate as the share of Chinese funding increases. In a similar regression with country and year fixed effects, I aimed to find the relationship between Chinese funding and unemployment rates. The regression model does not give robust evidence to claim that Chinese funding is significantly driven by by general macroeconomic changes.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-unemployment <- read_csv('/Users/mariana/Documents/GitHub/psci3200_marianamartinez/datasets/unemployment.csv')
+unemployment <- read_csv('/Users/mariana/Desktop/datasets/unemployment.csv')
 head(unemployment)
 ```
 
